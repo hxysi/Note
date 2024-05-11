@@ -50,6 +50,7 @@ git restore .
 rm 文件名
 ```
 
+
 ---
 
 **如果你是用的远程仓库不是Github，那么你可以直接跳到：**[这里](#Nogithub)
@@ -57,12 +58,14 @@ rm 文件名
 ---
 
 1. 查看C盘中的用户文件夹里是否存在.ssh文件夹
+<img width="690" alt="ssh" src="https://github.com/LHXTechie/Note/assets/61722590/da2cac3e-3fa8-4261-a488-1c1967a0d8c2">
 
 > [!TIP]
 >
 > 如果没有，则创建一个.ssh文件夹
 
 2. 查看.ssh文件夹中是否有 `id_esa` 和 `id_rsa.pub` 这两个文件。这两个就是SSH Key的秘钥对，`id_rsa`是私钥，不能泄露出去，`id_rsa.pub`是公钥，可以放心地告诉任何人。
+<img width="703" alt="sshFile" src="https://github.com/LHXTechie/Note/assets/61722590/0e3dd936-4598-4f78-bb1f-23a8e40377e0">
 
 > [!tip]
 >
@@ -81,7 +84,7 @@ rm 文件名
 1. 切换到项目目录
 
 ```bash
-cd "D:/C#/winforms/study1/studywinform"
+cd "your/path"
 ```
 
 2. 初始化仓库
@@ -105,7 +108,7 @@ git commit -m "提交说明"
 5. 连接远程仓库
 
 ```bash
-git remote add origin http://gitee.com/lhxHb/test-winform.git
+git remote add origin http://gitee.com/your_remote_warehous.git
 ```
 
 > [!tip]
@@ -119,7 +122,7 @@ git remote add origin http://gitee.com/lhxHb/test-winform.git
 6. 防止推送失败，先将项目目录添加到安全例外
 
 ```bash
-git config --global --add safe.directory "D:/c#/winForms/study1/studywinform"
+git config --global --add safe.directory "D:/your/path"
 ```
 
 7. 尝试推送
